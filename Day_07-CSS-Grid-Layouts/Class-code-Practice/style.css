@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* index01 styling start */
+
+main01 {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(23, 224, 207);
+  display: grid;
+  /* grid-template-columns: 20% 80%; */
+  /* grid-template-rows: 25% 25% 25% 25%; */
+  grid-template-columns: 20% 30% 40%;
+}
+.box {
+  border: 3px solid white;
+  background-color: rgb(214, 22, 195);
+  margin: 3px;
+}
+
+/* index01 styling end */
+
+/* index02 styling start */
+#main02 {
+  height: 100%;
+  width: 100%;
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 100px calc(100% - 200px) 100px;
+
+  grid-template-areas:
+    "header header"
+    "aside section"
+    "footer footer";
+  gap: 5px;
+}
+header {
+  grid-area: header;
+  background-color: blueviolet;
+}
+aside {
+  grid-area: aside;
+  background-color: burlywood;
+}
+section {
+  grid-area: section;
+  background-color: chartreuse;
+}
+footer {
+  grid-area: footer;
+  background-color: palevioletred;
+}
+/* index02 styling end */
