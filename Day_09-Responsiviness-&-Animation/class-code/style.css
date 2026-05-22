@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+.box {
+  height: 50vh;
+  width: 50vh;
+  background-color: red;
+}
+.child {
+  height: 50vw;
+  width: 50vw;
+  background-color: rgb(42, 185, 85);
+}
+.container {
+  height: 50vmax;
+  width: 50vhmax;
+  background-color: rgb(33, 152, 216);
+}
