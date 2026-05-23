@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+  margin: 20px;
+}
+/* css variable */
+h1 {
+  color: red;
+  font-size: 40px;
+}
+h1::after {
+  /*virtual memory */
+  content: " AJ";
+  color: yellow;
+}
+h1::before {
+  /*virtual memory */
+  content: " I ";
+}
+h2 {
+  margin-top: 20px;
+  font-size: 30px;
+  position: absolute;
+}
+h2::after {
+  content: "";
+  height: 3px;
+  width: 0%;
+  background-color: rgb(232, 232, 15);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: ease 0.5s;
+}
+h2:hover::after {
+  width: 100%;
+}
+
+button {
+  height: 100px;
+  width: 300px;
+  border: 5px solid orangered;
+  margin-top: 80px;
+  font-size: 40px;
+  background-color: transparent;
+  color: orangered;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: all ease 0.5s;
+  z-index: 1;
+}
+button::after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  background-color: rgb(20, 137, 220);
+  transition: all ease 0.5s;
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: -1;
+}
+button:hover::after {
+  transform: translate(-50%, -50%) scale(7);
+}
+button:hover {
+  border-color: rgb(20, 137, 220);
+  color: white;
+}
