@@ -57,3 +57,30 @@ h2.classList.toggle("heading2");
 
 const user2 = document.querySelector(".user02");
 user2.classList.replace("user02", "DK");
+
+// Bulb ON/OFF
+let bulb = document.querySelector(".bulb");
+
+let btn = document.querySelector(".btn");
+let isON = true;
+btn.addEventListener("click", function () {
+  /** ----------Method 1 -----------*/
+  if (isON === true) {
+    btn.innerText = "OFF";
+    bulb.classList.add("bulb-on"); /** best approach */
+    // bulb.style.backgroundColor = "yellow";
+    isON = false;
+  } else {
+    btn.innerText = "ON";
+    bulb.classList.remove("bulb-on"); /**best approach */
+    // bulb.style.backgroundColor = "white";
+    isON = true;
+  }
+
+  /** --------------Method 2 -------------*/
+  //   if (bulb.classList.toggle("bulb-on")) {
+  //     btn.innerText = "OFf";
+  //   } else {
+  //     btn.innerText = "ON";
+  //   }
+});

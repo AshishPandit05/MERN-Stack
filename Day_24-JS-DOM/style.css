@@ -35,3 +35,6 @@ body {
   border: none;
   background-color: white;
 }
+.bulb-on {
+  background-color: yellow;
+}
