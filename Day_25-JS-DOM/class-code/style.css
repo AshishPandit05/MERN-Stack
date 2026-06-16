@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+  color: white;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 10px;
+}
+
+input,
+button {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.main {
+  background-color: rgb(80, 77, 77);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+}
+box {
+  height: 200px;
+  width: 200px;
+  background-color: rgb(41, 184, 184);
+}
