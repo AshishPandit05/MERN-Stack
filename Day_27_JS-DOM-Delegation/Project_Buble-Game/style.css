@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(50, 51, 51);
+}
+.box {
+  position: relative;
+  background-color: rgb(250, 255, 255);
+  height: 70%;
+  width: 30%;
+  border-radius: 10px;
+}
+.buble {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.buttons {
+  height: 6%;
+  width: 30%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  border: none;
+}
+button {
+  padding: 9px 40px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+}
+#score {
+  padding: 9px 40px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 18px;
+}
+#start {
+  background-color: rgb(231, 247, 11);
+}
+#score {
+  background-color: rgb(16, 230, 112);
+}
+#delete {
+  background-color: rgb(251, 46, 46);
+}
