@@ -1,27 +1,25 @@
 import React, { useState } from "react";
 
 const Web = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [formData, setformData] = useState({});
   return (
     <div>
       <div>
         <input
           onChange={(e) => {
-            setName(e.target.value);
+            setformData({ ...formData, name: e.target.value });
           }}
           type="text"
         />
         <input
           onChange={(e) => {
-            setEmail(e.target.value);
+            setformData({ ...formData, email: e.target.value });
           }}
           type="email"
         />
         <input
           onChange={(e) => {
-            setPassword(e.target.value);
+            setformData({ ...formData, password: e.target.value });
           }}
           type="passowrd"
         />
