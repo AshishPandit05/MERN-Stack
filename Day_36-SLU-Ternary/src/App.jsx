@@ -1,9 +1,16 @@
-import React from "react";
+import { useState } from "react";
+import Login from "./Components/Login";
+import Register from "./Components/Register";
 
 const App = () => {
+  const [toggel, setToggel] = useState(true);
   return (
-    <div>
-      <h1 className="text-red-500 text-4xl">Hello</h1>
+    <div className="bg-gray-200 flex justify-center items-center h-screen">
+      {toggel ? (
+        <Login setToggel={setToggel} />
+      ) : (
+        <Register setToggel={setToggel} />
+      )}
     </div>
   );
 };
