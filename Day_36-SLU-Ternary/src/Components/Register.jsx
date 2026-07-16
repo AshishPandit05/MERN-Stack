@@ -1,15 +1,13 @@
 import React from "react";
 import { useState } from "react";
 
-const Register = ({ setToggel }) => {
+const Register = ({ setToggel, setUsers }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
+    image: "",
   });
-
-  const [users, setUsers] = useState([]);
-  console.log(users);
 
   const handleChange = (e) => {
     let { name, value } = e.target;
@@ -18,11 +16,12 @@ const Register = ({ setToggel }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setUsers([...users, formData]);
+    setUsers((prev) => [...prev, formData]);
     setFormData({
       name: "",
       email: "",
       password: "",
+      image: "",
     });
   };
   return (
@@ -30,7 +29,7 @@ const Register = ({ setToggel }) => {
       <form
         onSubmit={handleSubmit}
         action=""
-        className="bg-white flex p-2  gap-3 flex-col w-120 h-80 rounded-2xl justify-center items-center "
+        className="bg-white flex p-2  gap-3 flex-col w-120 h-90 rounded-2xl justify-center items-center "
       >
         <h3>Register</h3>
         <input
@@ -56,6 +55,14 @@ const Register = ({ setToggel }) => {
           className="border-2 p-1 w-90 rounded-sm"
           type="password"
           placeholder="Password"
+        />
+        <input
+          value={formData.image}
+          name="image"
+          onChange={handleChange}
+          className="border-2 p-1 w-90 h-10 rounded-sm"
+          type="url"
+          placeholder="image"
         />
         <button className="border-2 p-1.5 cursor-pointer w-90 rounded-sm bg-blue-600 text-white">
           Register
