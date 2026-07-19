@@ -1,9 +1,12 @@
 import React from "react";
+import Form from "./Components/Form";
+import RHF from "./Components/RHF";
 
 const App = () => {
   return (
     <div>
-      <h1>Hello</h1>
+      {/* <Form /> */}
+      <RHF />
     </div>
   );
 };
