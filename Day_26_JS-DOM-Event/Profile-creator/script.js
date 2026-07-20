@@ -10,35 +10,39 @@ let usersData = [
     name: "Aarav Sharma",
     email: "aarav.sharma@example.com",
     imageURL:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAzPJpfpDLrmdksXc8DgohJ7kfg__yOMraxQ&s",
+      "https://images.sftcdn.net/images/t_app-cover-s,f_auto/p/e76d4296-43f3-493b-9d50-f8e5c142d06c/2117667014/boys-profile-picture-screenshot",
     dob: "1998-05-14",
   },
   {
     id: 2,
     name: "Priya Verma",
     email: "priya.verma@example.com",
-    imageURL: "https://randomuser.me/api/portraits/women/45.jpg",
+    imageURL:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAzPJpfpDLrmdksXc8DgohJ7kfg__yOMraxQ&s",
     dob: "2000-11-22",
   },
   {
     id: 3,
     name: "Rohan Gupta",
     email: "rohan.gupta@example.com",
-    imageURL: "https://randomuser.me/api/portraits/men/18.jpg",
+    imageURL:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQSJTX8fntT8CoqF1o9Ow_s0am3kXE8UlyovgZh--VKA&s",
     dob: "1997-08-09",
   },
   {
     id: 4,
     name: "Sneha Patel",
     email: "sneha.patel@example.com",
-    imageURL: "https://randomuser.me/api/portraits/women/67.jpg",
+    imageURL:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ3JSbjqiZNDUfGsPkHleN1w3o_sTCZezQ2wYHxyV85w&s=10",
     dob: "2001-03-30",
   },
   {
     id: 5,
     name: "Kabir Singh",
     email: "kabir.singh@example.com",
-    imageURL: "https://randomuser.me/api/portraits/men/54.jpg",
+    imageURL:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFr2u80AyCClvdd6Z_1mFs5YHDWbqEIphFT03pDmM4Kw&s=10",
     dob: "1999-12-17",
   },
 ];
