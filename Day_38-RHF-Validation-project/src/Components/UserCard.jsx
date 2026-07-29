@@ -1,20 +1,18 @@
 import React from "react";
 
-const UserCard = () => {
+const UserCard = ({ user }) => {
   return (
-    <div className="m-3 w-80">
+    <div className="m-3 w-80 ">
       <div className="w-full max-w-sm rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
         <div className="flex items-center gap-4">
           <img
-            src="https://i.pravatar.cc/150?img=12"
+            src={user.Url}
             alt="Sarah Johnson"
             className="h-16 w-16 rounded-full object-cover"
           />
 
           <div>
-            <h2 className="text-lg font-semibold text-gray-900">
-              Sarah Johnson
-            </h2>
+            <h2 className="text-lg font-semibold text-gray-900">{user.name}</h2>
             <p className="text-sm text-gray-500">Product Designer</p>
           </div>
         </div>
@@ -22,12 +20,12 @@ const UserCard = () => {
         <div className="mt-6 space-y-3 border-t border-gray-100 pt-5 text-sm">
           <div>
             <p className="text-gray-400">Email</p>
-            <p className="font-medium text-gray-700">sarah.johnson@email.com</p>
+            <p className="font-medium text-gray-700">{user.email}</p>
           </div>
 
           <div>
             <p className="text-gray-400">Contact</p>
-            <p className="font-medium text-gray-700">+1 (555) 123-4567</p>
+            <p className="font-medium text-gray-700">{user.mobile}</p>
           </div>
         </div>
 

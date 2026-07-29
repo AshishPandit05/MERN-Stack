@@ -1,8 +1,25 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 
-const UserForm = () => {
+const UserForm = ({ setUsers, setToggle }) => {
+  let {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  let formSubmit = (data) => {
+    console.log(data);
+    setUsers((prev) => [...prev, data]);
+    reset();
+    setToggle((prev) => !prev);
+  };
   return (
-    <form className="w-full max-w-md rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+    <form
+      onSubmit={handleSubmit(formSubmit)}
+      className="w-full max-w-md rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
+    >
       <h2 className="text-xl font-semibold text-gray-900">User Details</h2>
       <p className="mt-1 text-sm text-gray-500">
         Add or update user information.
@@ -14,17 +31,24 @@ const UserForm = () => {
             Profile Image URL
           </label>
           <input
+            {...register("Url", {
+              required: "URL is required",
+            })}
             type="url"
             placeholder="https://example.com/avatar.jpg"
             className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
           />
         </div>
+        {errors.url && <p>Url do</p>}
 
         <div>
           <label className="mb-1 block text-sm font-medium text-gray-700">
             Full Name
           </label>
           <input
+            {...register("name", {
+              required: "name is required",
+            })}
             type="text"
             placeholder="Enter full name"
             className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
@@ -36,6 +60,9 @@ const UserForm = () => {
             Email Address
           </label>
           <input
+            {...register("email", {
+              required: "email is required",
+            })}
             type="email"
             placeholder="name@email.com"
             className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
@@ -47,6 +74,9 @@ const UserForm = () => {
             Contact Number
           </label>
           <input
+            {...register("mobile", {
+              required: "mobile is required",
+            })}
             type="tel"
             placeholder="+1 (555) 123-4567"
             className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
@@ -61,23 +91,9 @@ const UserForm = () => {
         >
           Save User
         </button>
-
-        <button
-          type="reset"
-          className="rounded-lg border border-gray-300 px-4 py-2.5 text-sm font-medium text-gray-700 transition hover:bg-gray-50"
-        >
-          Reset
-        </button>
       </div>
     </form>
   );
 };
-
-//   return (
-//     <div>
-
-//     </div>
-//   )
-// }
 
 export default UserForm;

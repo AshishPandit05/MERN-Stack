@@ -1,7 +1,7 @@
 import React from "react";
 import { UserCircle } from "lucide-react";
 
-const Navbar = () => {
+const Navbar = ({ setToggle }) => {
   return (
     <div>
       <nav className="flex items-center justify-between bg-white px-6 py-4 shadow-md">
@@ -27,7 +27,10 @@ const Navbar = () => {
         </div>
 
         {/* Right: CTA */}
-        <button className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700 cursor-pointer">
+        <button
+          onClick={() => setToggle((prev) => !prev)}
+          className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700 cursor-pointer"
+        >
           Create Profile
         </button>
       </nav>
