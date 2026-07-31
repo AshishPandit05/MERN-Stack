@@ -1,6 +1,6 @@
 import React from "react";
 
-const UserCard = ({ user, deleteCard, ind }) => {
+const UserCard = ({ user, deleteCard, ind, setToggle, setUpdatatedData }) => {
   return (
     <div className="m-3 w-80 ">
       <div className="w-full max-w-sm rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
@@ -29,13 +29,19 @@ const UserCard = ({ user, deleteCard, ind }) => {
           </div>
         </div>
 
-        <div className="mt-6 flex gap-3">
-          <button className="flex-1 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-indigo-700">
+        <div
+          onClick={() => {
+            setUpdatatedData(user);
+            setToggle((prev) => !prev);
+          }}
+          className="mt-6 flex gap-3"
+        >
+          <button className="flex-1 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-indigo-700 cursor-pointer">
             Update
           </button>
           <button
             onClick={() => deleteCard(ind)}
-            className="flex-1 rounded-lg border border-red-200 px-4 py-2 text-sm font-medium text-red-600 transition hover:bg-red-300"
+            className="flex-1 rounded-lg border border-red-200 px-4 py-2 text-sm font-medium text-red-600 transition hover:bg-red-300 cursor-pointer"
           >
             Delete
           </button>
