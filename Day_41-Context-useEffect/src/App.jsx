@@ -1,9 +1,14 @@
 import React from "react";
+import Home from "./components/Home";
+import About from "./components/About";
+import Contact from "./components/Contact";
 
 const App = () => {
   return (
     <div>
-      <h2>hello</h2>
+      <Home />
+      <About />
+      <Contact />
     </div>
   );
 };
