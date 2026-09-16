@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
+import { NavLink, Route, Router, Routes } from "react-router";
 
 const App = () => {
   const [toggle, setToggle] = useState("true");
@@ -10,23 +11,24 @@ const App = () => {
       <nav className="bg-gray-600 flex justify-between p-5 text-white text-xl">
         <h2>Logo</h2>
         <div className="flex gap-8 items-center ">
-          <p onClick={() => setToggle("Home")} className="cursor-pointer">
+          <NavLink to="/" className="cursor-pointer">
             Home
-          </p>
-          <p onClick={() => setToggle("About")} className="cursor-pointer">
+          </NavLink>
+          <NavLink to="about" className="cursor-pointer">
             About
-          </p>
-          <p onClick={() => setToggle("Contact")} className="cursor-pointer">
+          </NavLink>
+          <NavLink to="contact" className="cursor-pointer">
             Contact
-          </p>
+          </NavLink>
         </div>
         <div>Login</div>
       </nav>
-
       <div>
-        {toggle === "Home" && <Home />}
-        {toggle === "About" && <About />}
-        {toggle === "Contact" && <Contact />}
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+        </Routes>
       </div>
     </div>
   );
