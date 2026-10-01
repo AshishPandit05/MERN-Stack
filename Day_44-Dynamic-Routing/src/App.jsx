@@ -1,9 +1,12 @@
 import React from "react";
+import Navbar from "./Components/Navbar";
+import AppRoutes from "./Routes/AppRoutes";
 
 const App = () => {
   return (
     <div>
-      <h2>Dynamic Routing</h2>
+      <Navbar />
+      <AppRoutes />
     </div>
   );
 };
