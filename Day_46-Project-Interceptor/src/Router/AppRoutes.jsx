@@ -7,6 +7,9 @@ import RegisterPage from "../Pages/RegisterPage";
 import MainLayout from "../Layouts/MainLayout";
 import ProtectedRoute from "./ProtectedRoute";
 import PublicRoute from "./PublicRoute";
+import HomePage from "../Pages/HomePage";
+import UsersPage from "../Pages/UsersPage";
+import ProductsPage from "../Pages/ProductsPage";
 
 const AppRoutes = () => {
   let router = createBrowserRouter([
@@ -37,6 +40,20 @@ const AppRoutes = () => {
         {
           path: "",
           element: <MainLayout />,
+          children: [
+            {
+              path: "",
+              element: <HomePage />,
+            },
+            {
+              path: "",
+              element: <UsersPage />,
+            },
+            {
+              path: "",
+              element: <ProductsPage />,
+            },
+          ],
         },
       ],
     },
