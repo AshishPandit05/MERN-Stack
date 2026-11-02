@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const App = () => {
+  const [productData, setProductData] = useState([]);
+
+  let getProduct = async () => {
+    let res = await axios.get("https://fakestoreapi.com/products");
+    setProductData(res.data);
+    console.log(productData);
+  };
+
+  useEffect(() => {
+    getProduct();
+  }, []);
+
   return (
     <div>
-      <h1>Debouncing & throtling</h1>
+      {productData.map((val) => {
+        return <h1 key={val.id}>{val.title}</h1>;
+      })}
     </div>
   );
 };
