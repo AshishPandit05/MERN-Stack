@@ -1,0 +1,152 @@
+MongoDB – Introduction & Basic 
+
+1. What is MongoDB?
+MongoDB is an open-source, NoSQL, document-oriented database management system.
+
+It is used to store, manage, retrieve, update, and delete data.
+
+Unlike SQL databases, MongoDB stores data in JSON-like documents instead of traditional tables and rows.
+
+Example:
+{
+  "name": "Ashish",
+  "age": 21,
+  "course": "BCA",
+  "city": "Patna"
+}
+
+
+2. What is NoSQL?
+NoSQL stands for "Not Only SQL".
+
+It is a type of database that stores data in formats other than traditional relational tables.
+
+Features:
+- Flexible data structure.
+- Handles large amounts of data.
+- Easy to scale.
+- Suitable for modern applications.
+MongoDB is a NoSQL database.
+3. MongoDB vs MySQL
+MongoDB	MySQL
+NoSQL database	SQL database
+Stores documents	Stores tables
+Flexible schema	Structured schema
+Uses BSON	Uses tables and rows
+Uses MongoDB Query Language	Uses SQL
+
+4. MongoDB Terminology
+Term	Meaning
+Database	Collection of data
+Collection	Group of documents
+Document	Individual data record
+Field	Key-value pair
+_id	Unique identifier of a document
+
+Example:
+Database
+   |
+   └── Collection (Students)
+          |
+          ├── Document 1
+          ├── Document 2
+          └── Document 3
+
+
+5. What is BSON?
+BSON stands for Binary JSON.
+
+MongoDB uses BSON to store documents internally.
+
+It supports data types such as:
+- String
+- Number
+- Boolean
+- Date
+- ObjectId
+- Array
+6. Features of MongoDB
+1. Document-oriented database.
+2. Flexible schema.
+3. High scalability.
+4. Fast data retrieval with suitable indexes.
+5. Supports CRUD operations.
+6. Supports replication.
+7. Supports aggregation.
+7. What is MongoDB Atlas?
+MongoDB Atlas is a cloud-based database service.
+
+It allows developers to create, store, and manage MongoDB databases on cloud servers.
+
+Main features:
+- Cloud database hosting.
+- Database management.
+- Security.
+- Backup options.
+- Monitoring.
+Website: https://www.mongodb.com/atlas
+8. What is MongoDB Compass?
+MongoDB Compass is a graphical user interface (GUI) used to interact with MongoDB databases.
+
+It allows developers to:
+- View databases.
+- Create collections.
+- Insert documents.
+- Update documents.
+- Delete documents.
+- Run queries.
+9. MongoDB Atlas vs Compass
+MongoDB Atlas	MongoDB Compass
+Cloud database service	GUI application
+Hosts databases	Connects to databases
+Manages clusters	Manages database contents
+Web-based platform	Desktop application
+
+10. What are CRUD Operations?
+CRUD represents the four basic operations used to manage data in a database.
+Operation	Meaning	MongoDB Method
+Create	Insert data	insertOne()
+Read	Retrieve data	find()
+Update	Modify data	updateOne()
+Delete	Remove data	deleteOne()
+
+11. What is a MongoDB Cluster?
+A cluster is a database deployment that provides the resources and infrastructure required to store and manage data.
+
+In MongoDB Atlas, we create a cluster to host our database in the cloud.
+12. How MongoDB Works with Node.js and Express.js
+MongoDB stores application data, while Node.js and Express.js help the backend communicate with the database.
+
+Connection Flow:
+React.js (Frontend)
+       |
+       v
+Express.js (Backend)
+       |
+       v
+Node.js (Runtime)
+       |
+       v
+Mongoose (ODM)
+       |
+       v
+MongoDB Atlas (Database)
+
+
+- React.js: Builds the user interface.
+- Node.js: Runs JavaScript on the server.
+- Express.js: Handles API requests.
+- Mongoose: Helps interact with MongoDB.
+- MongoDB: Stores application data.
+13. Advantages of MongoDB
+- Flexible data structure.
+- Easy to use.
+- Supports large datasets.
+- Scalable.
+- Works well with Node.js.
+- Supports indexing and aggregation.
+14. Disadvantages of MongoDB
+- Data duplication can occur.
+- Requires proper data modeling.
+- Complex relationships can be harder to manage.
+- Indexes require additional storage.
